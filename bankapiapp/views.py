@@ -6,7 +6,7 @@ from bankapiapp.serializers import *
 from rest_framework.decorators import action
 from rest_framework.response import Response
 
-# #Create your views here.
+# Create your views here.
 class AccountViewSet(viewsets.ModelViewSet):
     queryset = Account.objects.all()
     serializer_class = AccountSerializer
@@ -17,7 +17,6 @@ class AccountViewSet(viewsets.ModelViewSet):
         account = self.get_object()
         return Response({'balance': account.balance})
     
-
 class CustomerViewSet(viewsets.ModelViewSet):
     queryset = Customer.objects.all()
     serializer_class = CustomerSerializer
