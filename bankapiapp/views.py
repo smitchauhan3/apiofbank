@@ -11,7 +11,7 @@ class AccountViewSet(viewsets.ModelViewSet):
     queryset = Account.objects.all()
     serializer_class = AccountSerializer
     
-    # /bankapiapp/{pk_id}/check_balance/
+    # /bankapiapp/accounts/{pk_id}/check_balance/
     @action(detail=True, methods=['get'])
     def check_balance(self, request, pk=None):
         account = self.get_object()
