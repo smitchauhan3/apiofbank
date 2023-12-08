@@ -1,6 +1,8 @@
 from rest_framework import serializers
 from .models import *
 
+# DRF(Django RestFramework) provides serializers that allow complex data types, such as Django models, to be easily converted to Python data types (e.g., dictionaries) and vice versa.
+
 class AccountSerializer(serializers.ModelSerializer):
     class Meta:
         model = Account
